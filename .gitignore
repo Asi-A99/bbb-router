@@ -1,0 +1,14 @@
+*.o
+*.ko
+*.mod
+*.mod.c
+*.cmd
+*.order
+*.symvers
+target/
+*.deb
+*.img
+*.img.xz
+*.docx
+__pycache__/
+.pytest_cache/
