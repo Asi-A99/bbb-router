@@ -1,13 +1,18 @@
 #!/bin/bash
-set -e 
+set -e
 
-for i in 10 20; do
-  sudo ip netns add n$i
-  sudo ip link add veth-n$i type veth peer name eno0 netns n$i
-  sudo ip addr add 10.10.$i.1/24 dev veth-n$i && sudo ip link set veth-n$i up
-  sudo ip -n n$i addr add 10.10.$i.10/24 dev eno0
-  sudo ip -n n$i link set eno0 up && sudo ip -n n$i link set lo up
-  sudo ip -n n$i route add default via 10.10.$i.1
-done
-sudo sysctl -w net.ipv4.ip_forward=1
+sudo ip netns add office
+sudo ip link add link eno0 name vlan10 type vlan id 10
+sudo ip link set vlan10 netns office
+sudo ip -n office addr add 192.168.10.1/24 dev vlan10
+sudo ip -n office link set lo up
+sudo ip -n office link set vlan10 up
+sudo ip -n office route add default via 192.168.10.2
 
+sudo ip netns add guest
+sudo ip link add link eno0 name vlan20 type vlan id 20
+sudo ip link set vlan20 netns guest
+sudo ip -n guest addr add 192.168.20.1/24 dev vlan20
+sudo ip -n guest link set lo up
+sudo ip -n guest link set vlan20 up
+sudo ip -n guest route add default via 192.168.20.2

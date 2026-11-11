@@ -12,3 +12,5 @@ target/
 *.docx
 __pycache__/
 .pytest_cache/
+.pytest_cache/
+__pycache__/
