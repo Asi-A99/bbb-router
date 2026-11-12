@@ -39,9 +39,9 @@ Board, serial adapter, USB Ethernet adapter, cables.
 - Practise a professional workflow: git branches and pull requests, namespace and hardware-in-the-loop tests, CI, Debian packaging, DKMS, documentation, and the kernel patch process.
 
 ## Known limitations
--The SR9700 USB adapter links at 10 Mbit/s half-duplex. TCP upload reaches about 5 Mbit/s, and downloads stall, most likely because of a duplex mismatch.
--The arm32 BPF JIT rejects the XDP program, so it runs in the interpreter.
--Booting needs the laptop, because U-Boot loads the kernel over TFTP.
--The single CPU saturates at about 28,000 forwarded packets per second, and the board stops responding.
--In the namespace tests, the VLANs are veths named like the board’s interfaces, so VLAN tagging itself isn’t tested.
--The hardware tests need an SSH key and the sudoers rule on the board.
+- The SR9700 USB adapter links at 10 Mbit/s half-duplex. TCP upload reaches about 5 Mbit/s, and downloads stall, most likely because of a duplex mismatch.
+- The arm32 BPF JIT rejects the XDP program, so it runs in the interpreter.
+- Booting needs the laptop, because U-Boot loads the kernel over TFTP.
+- The single CPU saturates at about 28,000 forwarded packets per second, and the board stops responding.
+- In the namespace tests, the VLANs are veths named like the board’s interfaces, so VLAN tagging itself isn’t tested.
+- The hardware tests need an SSH key and the sudoers rule on the board.
