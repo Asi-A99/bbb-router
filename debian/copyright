@@ -1,0 +1,14 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: bbr-tools
+Upstream-Contact: Asintha Ariyarathne <asintha.99@outlook.com>
+Source: https://github.com/Asi-A99/bbb-router
+
+Files: 
+Copyright: 2026 Asintha Ariyarathne <asintha.99@outlook.com>
+License: GPL-2
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License version 2 as
+ published by the Free Software Foundation.
+ .
+ On Debian systems, the full text of the GNU General Public License
+ version 2 can be found in the file '/usr/share/common-licenses/GPL-2'.
