@@ -27,6 +27,8 @@ flowchart LR
 ```
 
 ## Hardware
+<img src="images/Hardware_setup.jpg" alt="BeagleBone Black router setup" width="600">
+
 Board, serial adapter, USB Ethernet adapter, cables.
 
 ## Goals
