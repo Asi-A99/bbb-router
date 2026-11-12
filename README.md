@@ -36,7 +36,6 @@ Board, serial adapter, USB Ethernet adapter, cables.
 - Learn dynamic routing with FRR (OSPF and BGP) and how Linux exposes networking to user space through netlink.
 - Write and compare packet-processing code at three levels: nftables rules, a netfilter kernel module, and eBPF/XDP programs, with measured costs.
 - Find real performance bottlenecks with perf, mpstat and sar instead of guessing.
-- Practise a professional workflow: git branches and pull requests, namespace and hardware-in-the-loop tests, CI, Debian packaging, DKMS, documentation, and the kernel patch process.
 
 ## Known limitations
 - The SR9700 USB adapter links at 10 Mbit/s half-duplex. TCP upload reaches about 5 Mbit/s, and downloads stall, most likely because of a duplex mismatch.
